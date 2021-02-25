@@ -11,13 +11,15 @@ import UIKit
 这个类要做什么？
 
 */
-protocol baseMusrMethod {
+protocol BaseMustMethod {
 	func loadNewDate()
 	func loadMoreDate()
 	func cellClickEvent(_ index:IndexPath,_ model:BaseCellLayoutModel)
 	func configCell(_ index:IndexPath,_ model:BaseCellLayoutModel,_ cell:BaseCell)
 }
-class BaseTableViewController: BaseViewController,baseMusrMethod {
+typealias BaseTableViewCtr = BaseTableViewController & BaseMustMethod
+
+class BaseTableViewController: BaseViewController {
 
  
 	// MARK: - parameter property
@@ -40,15 +42,18 @@ class BaseTableViewController: BaseViewController,baseMusrMethod {
 	//系统方法
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		tableView.ssy.addHelp { [weak self](help) in
-			help.cellID = self?.cellType ?? ""
+		guard let ctr = self as? BaseTableViewCtr else {
+			return;
+		}
+		tableView.ssy.addHelp { [weak ctr](help) in
+			help.cellID = ctr?.cellType ?? ""
 			help.clickHnadle = {
-				[weak self] index,model in
-				self?.cellClickEvent(index,model)
+				[weak ctr] index,model in
+				ctr?.cellClickEvent(index,model)
 			}
 			help.configHandle = {
-				[weak self] index,model,cell in
-				self?.configCell(index, model, cell)
+				[weak ctr] index,model,cell in
+				ctr?.configCell(index, model, cell)
 			}
 		}
 
@@ -59,12 +64,12 @@ class BaseTableViewController: BaseViewController,baseMusrMethod {
 		}
 		
 		tableView.ssy.refreshingBlock {
-			[weak self] in
-			self?.loadNewDate()
+			[weak ctr] in
+			ctr?.loadNewDate()
 		}
 		tableView.ssy.loadMoreBlock{
-			[weak self] in
-			self?.loadMoreDate()
+			[weak ctr] in
+			ctr?.loadMoreDate()
 		}
 
 		assignDate()
@@ -90,18 +95,6 @@ class BaseTableViewController: BaseViewController,baseMusrMethod {
 	
 	// MARK: - Network Methods && Target Methods
 	//网络请求 && 点击事件
-	func loadNewDate()   {
-		
-	}
-	func loadMoreDate()   {
-		
-	}
-	func cellClickEvent(_ index:IndexPath,_ model:BaseCellLayoutModel)  {
-
-	}
-	func configCell(_ index:IndexPath,_ model:BaseCellLayoutModel,_ cell:BaseCell)  {
-
-	}
 	// MARK: - Private Method
 	//私有方法
 

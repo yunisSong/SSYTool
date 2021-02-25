@@ -8,7 +8,27 @@
 
 import UIKit
 
-class TestBase1ViewController: BaseTableViewController {
+class TestBase1ViewController: BaseTableViewCtr {
+
+	
 
 
+}
+
+extension TestBase1ViewController {
+	func loadNewDate() {
+		
+	}
+	
+	func loadMoreDate() {
+		
+	}
+	
+	func cellClickEvent(_ index: IndexPath, _ model: BaseCellLayoutModel) {
+		
+	}
+	
+	func configCell(_ index: IndexPath, _ model: BaseCellLayoutModel, _ cell: BaseCell) {
+		
+	}
 }
