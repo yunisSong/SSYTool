@@ -37,23 +37,26 @@ class MeViewController: UIViewController {
 		}
 		tabview.reloadData()
     }
-	func cellClickEvent(_ index:IndexPath,_ model:BaseCellLayoutModel)  {
+	func cellClickEvent(_ index:IndexPath,_ model:BaseModel)  {
 		if index.row == 0 {
-			self.navigationController?.pushViewController(MeViewController(), animated: true)
+			self.navigationController?.pushViewController(TestBase1ViewController(cellType: "TodoTableViewCell"), animated: true)
 		}
 	}
-	func cellConfig(_ index:IndexPath,_ model:BaseCellLayoutModel,_ cell:BaseCell,_ tableView:UITableView)  {
-//		if (model.cellID == "TodoTableViewCell") {
-//			let cell = cell as! TodoTableViewCell
-//			cell.frame = tableView.bounds ;
-//			cell.layoutIfNeeded()
-//			cell.selectImageView?.collectionView.reloadData()
-//			//heightConstraint 为内嵌的 collectionView 高度约束
-//			let heigth = cell.selectImageView?.collectionView.collectionViewLayout.collectionViewContentSize.height ?? 0.0;
-//			print("heigth",heigth)
-//			cell.collectionHeigth?.constraint.update(inset: heigth)
-//			cell.layoutIfNeeded()
-//		}
+	func cellConfig(_ index:IndexPath,_ model:BaseModel,_ cell:BaseCell,_ tableView:UITableView)  {
+		if let model = model as? BaseCellLayoutModel ,model.cellID.count > 0{
+			if (model.cellID == "TodoTableViewCell") {
+				let cell = cell as! TodoTableViewCell
+				cell.frame = tableView.bounds ;
+				cell.layoutIfNeeded()
+				cell.selectImageView?.collectionView.reloadData()
+				//heightConstraint 为内嵌的 collectionView 高度约束
+				let heigth = cell.selectImageView?.collectionView.collectionViewLayout.collectionViewContentSize.height ?? 0.0;
+				print("heigth",heigth)
+				cell.collectionHeigth?.constraint.update(inset: heigth)
+				cell.layoutIfNeeded()
+			}
+		}
+		
 	}
 	deinit {
 		print("MeViewController deinit")

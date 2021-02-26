@@ -36,7 +36,7 @@ class TodoTableViewCell: BaseCell {
 
         // Configure the view for the selected state
     }
-	override func configModel(model: BaseCellLayoutModel) {
+	override func configModel(model: BaseModel) {
 		
 	}
 	

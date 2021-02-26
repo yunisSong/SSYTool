@@ -24,7 +24,7 @@ class SYBaseListViewController: UIViewController{
 	// MARK: - parameter property
 	var tableView = UITableView.init(frame: .zero, style: .plain)
 	var cellType:String = ""
-	var listSource:[BaseCellLayoutModel]
+	var listSource:[BaseModel]
 	
 
 	// MARK: - Public Method
@@ -33,7 +33,7 @@ class SYBaseListViewController: UIViewController{
         fatalError("init(coder:) has not been implemented")
 	}
 
-	init(cellType:String,models:[BaseCellLayoutModel]) {
+	init(cellType:String,models:[BaseModel]) {
 		self.cellType = cellType
 		self.listSource = models
 		super.init(nibName: nil, bundle: nil)
@@ -95,7 +95,7 @@ class SYBaseListViewController: UIViewController{
 	func loadMoreDate()   {
 		
 	}
-	func cellClickEvent(_ index:IndexPath,_ model:BaseCellLayoutModel)  {
+	func cellClickEvent(_ index:IndexPath,_ model:BaseModel)  {
 
 	}
 	// MARK: - Private Method

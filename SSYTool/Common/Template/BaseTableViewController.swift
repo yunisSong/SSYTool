@@ -11,11 +11,12 @@ import UIKit
 这个类要做什么？
 
 */
+typealias requestData = ()->[Any]?
 protocol BaseMustMethod {
-	func loadNewDate()
-	func loadMoreDate()
-	func cellClickEvent(_ index:IndexPath,_ model:BaseCellLayoutModel)
-	func configCell(_ index:IndexPath,_ model:BaseCellLayoutModel,_ cell:BaseCell)
+	func loadNewDate() ->[BaseModel]?
+	func loadMoreDate() ->[BaseModel]?
+	func cellClickEvent(_ index:IndexPath,_ model:BaseModel)
+	func configCell(_ index:IndexPath,_ model:BaseModel,_ cell:BaseCell)
 }
 typealias BaseTableViewCtr = BaseTableViewController & BaseMustMethod
 
@@ -24,17 +25,16 @@ class BaseTableViewController: BaseViewController {
  
 	// MARK: - parameter property
 	var tableView = UITableView.init(frame: .zero, style: .plain)
-	var cellType:String = ""
+	var cellType:String
 	var pageIndex = 1;
-	var pageSize = 20;
-	
+	var pageSize = 20;	
 	// MARK: - Public Method
 	//外部方法
 	required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
 	}
 
-	init(cellType:String,models:[BaseCellLayoutModel]) {
+	init(cellType:String) {
 		self.cellType = cellType
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -65,11 +65,11 @@ class BaseTableViewController: BaseViewController {
 		
 		tableView.ssy.refreshingBlock {
 			[weak ctr] in
-			ctr?.loadNewDate()
+			ctr?.afterRefresh()
 		}
 		tableView.ssy.loadMoreBlock{
 			[weak ctr] in
-			ctr?.loadMoreDate()
+			ctr?.afterLoadMore()
 		}
 
 		assignDate()
@@ -92,7 +92,23 @@ class BaseTableViewController: BaseViewController {
 	func loadSubViews() {
 		
 	}
-	
+	func afterRefresh(){
+		guard let ctr = self as? BaseTableViewCtr else {
+			return;
+		}
+		let model = ctr.loadNewDate()
+		ctr.tableView.help.refreshing(models: model)
+		ctr.pageIndex = 0;
+	}
+	func afterLoadMore(){
+		guard let ctr = self as? BaseTableViewCtr else {
+			return;
+		}
+		let model = ctr.loadMoreDate()
+		ctr.tableView.help.loadMore(models: model)
+		ctr.pageIndex += 1;
+
+	}
 	// MARK: - Network Methods && Target Methods
 	//网络请求 && 点击事件
 	// MARK: - Private Method

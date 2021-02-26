@@ -12,8 +12,9 @@ import Foundation
 //indexPath
 typealias SYClickHandle = ()->Void
 typealias SYEventHandle = ()->Void
-typealias SYCellClickHandle = (IndexPath,BaseCellLayoutModel)->Void
-typealias SYCellConfigHandle = (IndexPath,BaseCellLayoutModel,BaseCell)->Void
+//typealias SYCellClickHandle = (IndexPath,BaseCellLayoutModel)->Void
+//typealias SYCellConfigHandle = (IndexPath,BaseCellLayoutModel,BaseCell)->Void
+
 
 //延迟函数
 //异步处理

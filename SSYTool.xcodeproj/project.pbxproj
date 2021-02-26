@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7853FC6625E88BB50044D31D /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7853FC6425E88BB50044D31D /* TestTableViewCell.swift */; };
+		7853FC6725E88BB50044D31D /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7853FC6525E88BB50044D31D /* TestTableViewCell.xib */; };
+		7853FC6C25E891940044D31D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7853FC6B25E891940044D31D /* BaseModel.swift */; };
+		7853FC6E25E891AA0044D31D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7853FC6D25E891AA0044D31D /* BaseTableViewCell.swift */; };
 		78F707D825E7914E0085A42E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707D725E7914E0085A42E /* AppDelegate.swift */; };
 		78F707DF25E7914E0085A42E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F707DD25E7914E0085A42E /* Main.storyboard */; };
 		78F707E125E791500085A42E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F707E025E791500085A42E /* Assets.xcassets */; };
@@ -17,7 +21,6 @@
 		78F7080C25E792060085A42E /* SSY+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707F125E792060085A42E /* SSY+UIView.swift */; };
 		78F7080D25E792060085A42E /* SSY+ScrollViewRegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707F225E792060085A42E /* SSY+ScrollViewRegisterCell.swift */; };
 		78F7080E25E792060085A42E /* SSY+UIColorToUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707F325E792060085A42E /* SSY+UIColorToUIImage.swift */; };
-		78F7080F25E792060085A42E /* SSY+TableViewHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707F425E792060085A42E /* SSY+TableViewHelp.swift */; };
 		78F7081025E792060085A42E /* BaseCellLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707F525E792060085A42E /* BaseCellLayoutModel.swift */; };
 		78F7081125E792060085A42E /* CommonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707F625E792060085A42E /* CommonBlock.swift */; };
 		78F7081225E792060085A42E /* AddCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F707F925E792060085A42E /* AddCollectionViewCell.xib */; };
@@ -51,6 +54,10 @@
 /* Begin PBXFileReference section */
 		0E86692D15E010D77D5CF0B9 /* Pods-SSYTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSYTool.debug.xcconfig"; path = "Target Support Files/Pods-SSYTool/Pods-SSYTool.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1608051C70C7332C3460EA /* Pods_SSYTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSYTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7853FC6425E88BB50044D31D /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		7853FC6525E88BB50044D31D /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		7853FC6B25E891940044D31D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		7853FC6D25E891AA0044D31D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		78F707D425E7914E0085A42E /* SSYTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSYTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F707D725E7914E0085A42E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F707DE25E7914E0085A42E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +70,6 @@
 		78F707F125E792060085A42E /* SSY+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SSY+UIView.swift"; sourceTree = "<group>"; };
 		78F707F225E792060085A42E /* SSY+ScrollViewRegisterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SSY+ScrollViewRegisterCell.swift"; sourceTree = "<group>"; };
 		78F707F325E792060085A42E /* SSY+UIColorToUIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SSY+UIColorToUIImage.swift"; sourceTree = "<group>"; };
-		78F707F425E792060085A42E /* SSY+TableViewHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SSY+TableViewHelp.swift"; sourceTree = "<group>"; };
 		78F707F525E792060085A42E /* BaseCellLayoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCellLayoutModel.swift; sourceTree = "<group>"; };
 		78F707F625E792060085A42E /* CommonBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonBlock.swift; sourceTree = "<group>"; };
 		78F707F925E792060085A42E /* AddCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -114,6 +120,16 @@
 				865948D17289B6D4A60B7594 /* Pods-SSYTool.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7853FC6A25E8917C0044D31D /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				78F707EE25E792060085A42E /* SSY+TableView.swift */,
+				7853FC6B25E891940044D31D /* BaseModel.swift */,
+				7853FC6D25E891AA0044D31D /* BaseTableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		78F707CB25E7914E0085A42E = {
@@ -178,13 +194,12 @@
 		78F707ED25E792060085A42E /* SSYLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				78F707EE25E792060085A42E /* SSY+TableView.swift */,
+				7853FC6A25E8917C0044D31D /* TableView */,
 				78F707EF25E792060085A42E /* SSY+StringToUINib.swift */,
 				78F707F025E792060085A42E /* SSY.swift */,
 				78F707F125E792060085A42E /* SSY+UIView.swift */,
 				78F707F225E792060085A42E /* SSY+ScrollViewRegisterCell.swift */,
 				78F707F325E792060085A42E /* SSY+UIColorToUIImage.swift */,
-				78F707F425E792060085A42E /* SSY+TableViewHelp.swift */,
 			);
 			path = SSYLibrary;
 			sourceTree = "<group>";
@@ -257,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				78F7082925E792210085A42E /* TestBase1ViewController.swift */,
+				7853FC6425E88BB50044D31D /* TestTableViewCell.swift */,
+				7853FC6525E88BB50044D31D /* TestTableViewCell.xib */,
 			);
 			path = TestBase;
 			sourceTree = "<group>";
@@ -331,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F707E425E791500085A42E /* LaunchScreen.storyboard in Resources */,
+				7853FC6725E88BB50044D31D /* TestTableViewCell.xib in Resources */,
 				78F707E125E791500085A42E /* Assets.xcassets in Resources */,
 				78F7081225E792060085A42E /* AddCollectionViewCell.xib in Resources */,
 				78F7081425E792060085A42E /* SelectImageCollectionViewCell.xib in Resources */,
@@ -396,7 +414,6 @@
 				78F7083525E792210085A42E /* TodoTableViewCell.swift in Sources */,
 				78F7083325E792210085A42E /* SYTableViewCell.swift in Sources */,
 				78F7082F25E792210085A42E /* Tabbar.swift in Sources */,
-				78F7080F25E792060085A42E /* SSY+TableViewHelp.swift in Sources */,
 				78F7080D25E792060085A42E /* SSY+ScrollViewRegisterCell.swift in Sources */,
 				78F7081925E792060085A42E /* BaseTableViewController.swift in Sources */,
 				78F7081A25E792060085A42E /* BaseColletionViewController.swift in Sources */,
@@ -407,14 +424,17 @@
 				78F7081125E792060085A42E /* CommonBlock.swift in Sources */,
 				78F7081325E792060085A42E /* AddCollectionViewCell.swift in Sources */,
 				78F7080A25E792060085A42E /* SSY+StringToUINib.swift in Sources */,
+				7853FC6E25E891AA0044D31D /* BaseTableViewCell.swift in Sources */,
 				78F7081D25E792060085A42E /* SYBaseListViewController.swift in Sources */,
 				78F7083125E792210085A42E /* TabbarViewController.swift in Sources */,
 				78F7081B25E792060085A42E /* Network.swift in Sources */,
+				7853FC6625E88BB50044D31D /* TestTableViewCell.swift in Sources */,
 				78F7083925E792210085A42E /* SYTodoViewController.swift in Sources */,
 				78F7083225E792210085A42E /* MeViewController.swift in Sources */,
 				78F7081025E792060085A42E /* BaseCellLayoutModel.swift in Sources */,
 				78F7081C25E792060085A42E /* API.swift in Sources */,
 				78F7080925E792060085A42E /* SSY+TableView.swift in Sources */,
+				7853FC6C25E891940044D31D /* BaseModel.swift in Sources */,
 				78F7081725E792060085A42E /* BaseScrollContainerViewController.swift in Sources */,
 				78F7081825E792060085A42E /* BaseViewController.swift in Sources */,
 				78F7080C25E792060085A42E /* SSY+UIView.swift in Sources */,

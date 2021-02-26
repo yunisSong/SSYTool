@@ -10,7 +10,10 @@ import Foundation
 extension String:SSYCompatible{}
 extension SSYHelp where Base == String
 {
-	func ssy_nib() -> UINib {
+	func ssy_nib() -> UINib? {
+		if self.base.count == 0 {
+			return nil
+		}
 		return UINib.init(nibName: self.base, bundle: nil)
 	}
 

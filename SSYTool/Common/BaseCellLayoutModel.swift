@@ -25,7 +25,7 @@ enum CellLayoutType {
 	case remark
 }
 
-class BaseCellLayoutModel: NSObject {
+class BaseCellLayoutModel: BaseModel {
 	
 	//MARK: - 通讯相关
 	var postKey = ""
@@ -57,14 +57,3 @@ class BaseCellLayoutModel: NSObject {
 
 	
 }
-
-//extension BaseCellModel {
-//	func configModel(cellType:CellLayoutType = .textField,
-//					 canEdit:Bool = false,
-//					 leftString:String = "",
-//					 leftString_2:String = "",
-//					 leftString_3:String = "")
-//	{
-//		self.cellType = cellType
-//	}
-//}

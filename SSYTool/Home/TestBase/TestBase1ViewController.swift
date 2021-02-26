@@ -12,23 +12,30 @@ class TestBase1ViewController: BaseTableViewCtr {
 
 	
 
-
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		
+	}
 }
 
 extension TestBase1ViewController {
-	func loadNewDate() {
-		
+	func loadNewDate() -> [BaseModel]? {
+		let model = BaseModel()
+		return [model,model,model]
 	}
 	
-	func loadMoreDate() {
-		
+	func loadMoreDate() -> [BaseModel]? {
+		let model = BaseModel()
+		return [model,model,model]
 	}
 	
-	func cellClickEvent(_ index: IndexPath, _ model: BaseCellLayoutModel) {
-		
+	func cellClickEvent(_ index: IndexPath, _ model: BaseModel) {
+			
 	}
 	
-	func configCell(_ index: IndexPath, _ model: BaseCellLayoutModel, _ cell: BaseCell) {
+	func configCell(_ index: IndexPath, _ model: BaseModel, _ cell: BaseCell) {
 		
 	}
 }
