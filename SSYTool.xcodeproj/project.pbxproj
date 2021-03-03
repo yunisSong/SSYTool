@@ -52,6 +52,10 @@
 		78F7083725E792210085A42E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7082C25E792210085A42E /* HomeViewController.swift */; };
 		78F7083825E792210085A42E /* SYTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F7082D25E792210085A42E /* SYTableViewCell.xib */; };
 		78F7083925E792210085A42E /* SYTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7082E25E792210085A42E /* SYTodoViewController.swift */; };
+		8BAB34C425EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB34C225EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.swift */; };
+		8BAB34C525EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAB34C325EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.xib */; };
+		8BAB34C925EFC291005C65E7 /* UIFont+config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB34C825EFC291005C65E7 /* UIFont+config.swift */; };
+		8BAB34CD25EFD971005C65E7 /* UIColor+config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB34CC25EFD971005C65E7 /* UIColor+config.swift */; };
 		A9DC24BEDBE0EC4B469B86CE /* Pods_SSYTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1608051C70C7332C3460EA /* Pods_SSYTool.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +111,10 @@
 		78F7082E25E792210085A42E /* SYTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYTodoViewController.swift; sourceTree = "<group>"; };
 		78F7083B25E793D80085A42E /* SSYTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSYTool-Bridging-Header.h"; sourceTree = "<group>"; };
 		865948D17289B6D4A60B7594 /* Pods-SSYTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSYTool.release.xcconfig"; path = "Target Support Files/Pods-SSYTool/Pods-SSYTool.release.xcconfig"; sourceTree = "<group>"; };
+		8BAB34C225EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSYDefaultTitleTableViewCell.swift; sourceTree = "<group>"; };
+		8BAB34C325EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSYDefaultTitleTableViewCell.xib; sourceTree = "<group>"; };
+		8BAB34C825EFC291005C65E7 /* UIFont+config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+config.swift"; sourceTree = "<group>"; };
+		8BAB34CC25EFD971005C65E7 /* UIColor+config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+config.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,13 +146,6 @@
 				7853FC6D25E891AA0044D31D /* BaseTableViewCell.swift */,
 			);
 			path = TableView;
-			sourceTree = "<group>";
-		};
-		789D0A7925EF6B6B0032AF7E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		789D0A7A25EF6B760032AF7E /* Controller */ = {
@@ -262,8 +263,9 @@
 		78F707FE25E792060085A42E /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				8BAB34C725EFC268005C65E7 /* Config */,
+				8BAB34BA25EFC120005C65E7 /* View */,
 				789D0A7A25EF6B760032AF7E /* Controller */,
-				789D0A7925EF6B6B0032AF7E /* View */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -312,6 +314,24 @@
 				789D0A8425EF74B50032AF7E /* TestCollectionViewCell.xib */,
 			);
 			path = TestBase;
+			sourceTree = "<group>";
+		};
+		8BAB34BA25EFC120005C65E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BAB34C225EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.swift */,
+				8BAB34C325EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BAB34C725EFC268005C65E7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8BAB34C825EFC291005C65E7 /* UIFont+config.swift */,
+				8BAB34CC25EFD971005C65E7 /* UIColor+config.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		E56ED940C71C01CDECBE5C11 /* Frameworks */ = {
@@ -383,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAB34C525EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.xib in Resources */,
 				78F707E425E791500085A42E /* LaunchScreen.storyboard in Resources */,
 				7853FC6725E88BB50044D31D /* TestTableViewCell.xib in Resources */,
 				789D0A8625EF74B50032AF7E /* TestCollectionViewCell.xib in Resources */,
@@ -445,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F7080E25E792060085A42E /* SSY+UIColorToUIImage.swift in Sources */,
+				8BAB34C425EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.swift in Sources */,
 				78F7081F25E792060085A42E /* SYNavigationView.swift in Sources */,
 				78F7083725E792210085A42E /* HomeViewController.swift in Sources */,
 				78F7083425E792210085A42E /* TestBase1ViewController.swift in Sources */,
@@ -471,9 +493,11 @@
 				78F7083925E792210085A42E /* SYTodoViewController.swift in Sources */,
 				78F7083225E792210085A42E /* MeViewController.swift in Sources */,
 				78F7081025E792060085A42E /* BaseCellLayoutModel.swift in Sources */,
+				8BAB34C925EFC291005C65E7 /* UIFont+config.swift in Sources */,
 				78F7081C25E792060085A42E /* API.swift in Sources */,
 				78F7080925E792060085A42E /* SSY+TableView.swift in Sources */,
 				7853FC6C25E891940044D31D /* BaseModel.swift in Sources */,
+				8BAB34CD25EFD971005C65E7 /* UIColor+config.swift in Sources */,
 				789D0A8525EF74B50032AF7E /* TestCollectionViewCell.swift in Sources */,
 				78F7081725E792060085A42E /* BaseScrollContainerViewController.swift in Sources */,
 				78F7081825E792060085A42E /* BaseViewController.swift in Sources */,

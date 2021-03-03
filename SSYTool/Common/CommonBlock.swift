@@ -12,26 +12,13 @@ import Foundation
 //indexPath
 typealias SYClickHandle = ()->Void
 typealias SYEventHandle = ()->Void
-//typealias SYCellClickHandle = (IndexPath,BaseCellLayoutModel)->Void
-//typealias SYCellConfigHandle = (IndexPath,BaseCellLayoutModel,BaseCell)->Void
+
 
 
 //延迟函数
 //异步处理
 //回到主线程处理
-
-
-
-protocol test {
-	func t1()
-	func t2()
-	
-}
-
-extension test {
-	func t1()  {
-	}
-}
+//任务队列
 
 
 // FIXME: 1. 封装简单的tableview 单一样式
