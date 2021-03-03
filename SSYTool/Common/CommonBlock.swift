@@ -25,11 +25,11 @@ typealias SYEventHandle = ()->Void
 protocol test {
 	func t1()
 	func t2()
+	
 }
 
 extension test {
 	func t1()  {
-	
 	}
 }
 

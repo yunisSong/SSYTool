@@ -11,20 +11,18 @@ import Foundation
 extension UIView:SSYCompatible{}
 extension SSYHelp where Base: UIView
 {
-    /// 部分圆角
-    ///
-    /// - Parameters:
-    ///   - corners: 需要实现为圆角的角，可传入多个
-    ///   - radii: 圆角半径
-    func corner(byRoundingCorners corners: UIRectCorner, radii: CGFloat) {
+	/// 添加圆角
+	/// - Parameter corners: 添加圆角的位置
+	/// - Parameter radii: 圆角大小
+	/// - Parameter borderColor: 边框颜色
+	/// - Parameter borderWidth: 边框宽度
+	func corner(byRoundingCorners corners: UIRectCorner = [.topLeft,.topRight,.bottomLeft,.bottomRight], radii: CGFloat=5,borderColor:UIColor = .clear,borderWidth:CGFloat = 1) {
         let maskPath = UIBezierPath(roundedRect: self.base.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radii, height: radii))
         let maskLayer = CAShapeLayer()
 		maskLayer.frame = self.base.bounds
         maskLayer.path = maskPath.cgPath
-		maskLayer.borderColor = UIColor.red.cgColor
-		maskLayer.borderWidth = 1
-
-
+		maskLayer.borderColor = borderColor.cgColor
+		maskLayer.borderWidth = borderWidth
         self.base.layer.mask = maskLayer
     }
 }

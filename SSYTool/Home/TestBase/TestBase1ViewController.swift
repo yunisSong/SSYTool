@@ -16,23 +16,44 @@ class TestBase1ViewController: BaseTableViewCtr {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
 	}
 }
 
 extension TestBase1ViewController {
-	func loadNewDate() -> [BaseModel]? {
+	
+	func loadNewData(handle:@escaping ([BaseModel]?) -> Void) {
 		let model = BaseModel()
-		return [model,model,model]
+		
+		DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
+			DispatchQueue.main.async {
+				handle([model,model,model])
+
+			}
+		}
 	}
 	
-	func loadMoreDate() -> [BaseModel]? {
+	func loadMoreData(handle: @escaping ([BaseModel]?) -> Void) {
 		let model = BaseModel()
-		return [model,model,model]
+		DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
+			DispatchQueue.main.async {
+				handle([model,model,model])
+
+			}
+		}
 	}
+
 	
 	func cellClickEvent(_ index: IndexPath, _ model: BaseModel) {
-			
+		
+		
+		
+		if index.row == 0 {
+			let layout = UICollectionViewFlowLayout.init()
+			layout.itemSize = .init(width: 150, height: 150)
+			layout.scrollDirection = .vertical
+			let collCtr = TestCollectionViewController.init(cellType: "TestCollectionViewCell", itemWidth: 100)
+			self.navigationController?.pushViewController(collCtr, animated: true)
+		}
 	}
 	
 	func configCell(_ index: IndexPath, _ model: BaseModel, _ cell: BaseCell) {

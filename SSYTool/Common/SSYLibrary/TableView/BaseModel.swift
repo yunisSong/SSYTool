@@ -23,3 +23,9 @@ class BaseCell: UITableViewCell {
 		
 	}
 }
+class BaseCollectionCell: UICollectionViewCell {
+	func configModel(model:BaseModel)
+	{
+		
+	}
+}

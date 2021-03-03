@@ -76,7 +76,7 @@ class ImageSelectorView: UIView {
 		collectionView.SSY.ssy_register(nib: "AddCollectionViewCell")
 		collectionView.delegate = self
 		collectionView.dataSource = self
-
+		collectionView.backgroundColor = .orange
 		return collectionView
 	}()
 	

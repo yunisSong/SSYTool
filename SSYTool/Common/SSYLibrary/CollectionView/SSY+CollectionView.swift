@@ -1,31 +1,26 @@
 //
-//  SSY+TableView.swift
-//  Baoxin
+//  SSY+CollectionView.swift
+//  SSYTool
 //
-//  Created by Yunis on 2021/2/16.
+//  Created by Yunis on 2021/3/3.
 //  Copyright © 2021 Yunis. All rights reserved.
 //
 
 import Foundation
+typealias SYCollectionCellClickHandle = (IndexPath,BaseModel)->Void
+typealias SYCollectionCellConfigHandle = (IndexPath,BaseModel,BaseCollectionCell)->Void
 
-///为 tableview 添加一个帮助类 用来处理代理和数据源
-
-//TODO: 添加空数据时候的占位视图
-
-typealias SYCellClickHandle = (IndexPath,BaseModel)->Void
-typealias SYCellConfigHandle = (IndexPath,BaseModel,BaseCell)->Void
-
-extension UITableView {
+extension UICollectionView {
 	private static var syHelp:Void?
-	var help:SYTableViewHelp{
+	var help:SYCollectionViewHelp{
 		
 		get {
 			// 使用关联数据获取
 			let hl = objc_getAssociatedObject(self, &(Self.syHelp))
 			if let hl = hl {
-				return hl as! SYTableViewHelp
+				return hl as! SYCollectionViewHelp
 			}
-			let help = SYTableViewHelp()
+			let help = SYCollectionViewHelp()
 			self.help = help
 			return help
 		}
@@ -36,12 +31,12 @@ extension UITableView {
 	}
 }
 
-extension SSYHelp where Base: UITableView {
+extension SSYHelp where Base: UICollectionView {
 	
-	mutating func addHelp(help:(SYTableViewHelp)->Void)  {
+	mutating func addHelp(help:(SYCollectionViewHelp)->Void)  {
 		
 		self.configuration()
-		self.base.help.tab = self.base
+		self.base.help.collView = self.base
 		self.base.delegate = self.base.help
 		self.base.dataSource = self.base.help
 		help(self.base.help)
@@ -56,13 +51,13 @@ extension SSYHelp where Base: UITableView {
 	}
 	/// 统一设置 tableview 样式
 	private func configuration()  {
-		self.base.separatorStyle = .none
 
+		
 	}
 	
 	
 }
-extension SSYHelp where Base: UITableView
+extension SSYHelp where Base: UICollectionView
 {
 	func beginRefreshing()  {
 		self.base.mj_header?.beginRefreshing()
@@ -86,23 +81,23 @@ extension SSYHelp where Base: UITableView
 }
 
 
-class SYTableViewHelp: NSObject {
+class SYCollectionViewHelp: NSObject {
 	var dataSource : [BaseModel]?
 	var cellID = ""
-	var clickHnadle: SYCellClickHandle?
-	var configHandle: SYCellConfigHandle?
+	var clickHnadle: SYCollectionCellClickHandle?
+	var configHandle: SYCollectionCellConfigHandle?
 	
-	weak var tab:UITableView?
+	weak var collView:UICollectionView?
 	
 	func refreshing(models:[BaseModel]?)  {
 		self.dataSource = models
-		self.tab?.ssy.endRefreshing()
-		tab?.reloadData()
+		collView?.ssy.endRefreshing()
+		collView?.reloadData()
 	}
 	func loadMore(models:[BaseModel]?)  {
 		self.dataSource?.append(contentsOf: models ?? [])
-		self.tab?.ssy.endLoadMore()
-		tab?.reloadData()
+		collView?.ssy.endLoadMore()
+		collView?.reloadData()
 	}
 	
 	deinit {
@@ -111,31 +106,30 @@ class SYTableViewHelp: NSObject {
 
 }
 	// MARK: - 帮助类扩展 UITableViewDelegate
-extension SYTableViewHelp:UITableViewDelegate
+extension SYCollectionViewHelp:UICollectionViewDelegate
 {
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let model = dataSource?[indexPath.row]
-		clickHnadle?(indexPath,model!)
-	}
+
 }
 // MARK: - 帮助类扩展 UITableViewDataSource
-extension SYTableViewHelp:UITableViewDataSource {
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		tableView.mj_footer?.isHidden = dataSource?.count == 0
+extension SYCollectionViewHelp:UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		collectionView.mj_footer?.isHidden = dataSource?.count == 0
 		return dataSource?.count ?? 0
 	}
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		var cell:UITableViewCell
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		var cell:UICollectionViewCell
 		let model = dataSource?[indexPath.row]
 		if let model = model as? BaseCellLayoutModel ,model.cellID.count > 0{
-			cell = tableView.dequeueReusableCell(withIdentifier: model.cellID, for: indexPath)
+			cell = collectionView.dequeueReusableCell(withReuseIdentifier: model.cellID, for: indexPath)
 		}else{
-			cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+			cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
 		}
-		let bcell = cell as! BaseCell
+		let bcell = cell as! BaseCollectionCell
 		bcell.configModel(model: model!)
 		configHandle?(indexPath,model!,bcell)
 		return cell
 	}
-}
+	
 
+}

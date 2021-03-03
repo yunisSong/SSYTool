@@ -29,7 +29,7 @@ class SYTableViewCell: BaseCell {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		titleView.ssy.corner(byRoundingCorners: [.topLeft,.topRight], radii: 15)
-
+		genderImageView.ssy.corner()
 	}
 
     override func setSelected(_ selected: Bool, animated: Bool) {

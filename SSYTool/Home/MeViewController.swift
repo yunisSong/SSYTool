@@ -25,10 +25,10 @@ class MeViewController: UIViewController {
 				[weak self] index,model in
 				self?.cellClickEvent(index,model)
 			}
-//			help.configHandle = {
-//				[weak self] index,model,cell in
-//				self?.cellConfig(index, model, cell,tabview)
-//			}
+			help.configHandle = {
+				[weak self] index,model,cell in
+				self?.cellConfig(index, model, cell,tabview)
+			}
 		}
 		view.addSubview(tabview)
 		tabview.snp.makeConstraints { (make) in
