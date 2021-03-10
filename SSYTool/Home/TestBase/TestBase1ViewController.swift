@@ -7,19 +7,20 @@
 //
 
 import UIKit
+// 两种写法都可以 BaseTableViewCtr = BaseTableViewController & BaseTableCtrMustMethod
+//class TestBase1ViewController: BaseTableViewCtr
+//class TestBase1ViewController: BaseTableViewController
+//extension TestBase1ViewController: BaseTableCtrMustMethod
 
-class TestBase1ViewController: BaseTableViewCtr {
+class TestBase1ViewController: BaseTableViewController {
 
-	
-
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 	}
 }
 
-extension TestBase1ViewController {
+extension TestBase1ViewController :BaseTableCtrMustMethod{
 	
 	func loadNewData(handle:@escaping ([BaseModel]?) -> Void) {
 		let model = BaseModel()
