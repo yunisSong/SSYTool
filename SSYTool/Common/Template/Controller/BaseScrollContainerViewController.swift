@@ -10,6 +10,8 @@ import UIKit
 /*
 这个类要做什么？
 
+ 页面超过一页显示的页面 但又是不同类型
+ 
 */
 class BaseScrollContainerViewController: BaseViewController {
 

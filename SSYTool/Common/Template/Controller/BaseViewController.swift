@@ -12,6 +12,11 @@ import UIKit
 
 nav 样式 是否隐藏
 
+背景色
+ 
+通讯框
+ 
+
 
 */
 class BaseViewController: UIViewController {
