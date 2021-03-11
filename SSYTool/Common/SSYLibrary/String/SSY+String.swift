@@ -15,7 +15,7 @@ attributeString 删除 颜色 字体 行间距
 extension NSString:SSYCompatible{}
 extension SSYHelp where Base: NSString {
 	func isPhone() -> Bool {
-		let predicateStr:String! = "^1[34578]\\d{9}$$"
+		let predicateStr:String! = "^1[34578]\\d{9}$"
 		let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
 		return predicate.evaluate(with: self.base)
 	}
