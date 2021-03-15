@@ -19,7 +19,9 @@ class SYTableViewCell: BaseCell {
 	@IBOutlet weak var operationTime: UILabel!
 	@IBOutlet weak var stateLabel: UILabel!
 	@IBOutlet weak var genderImageView: UIImageView!
+	@IBOutlet weak var roundLabel: SSYRoundedCornersLabel!
 	
+	@IBOutlet weak var testView: TopBottomTitleView!
 	@IBOutlet weak var titleView: UIView!
 	
 	override func awakeFromNib() {
@@ -46,6 +48,9 @@ class SYTableViewCell: BaseCell {
 		addressLabel.text = "评估地点：高新南西一刀果实大厦909 1😯2c手机"
 		operationTime.text = "2021-02-09"
 		stateLabel.text = "评估分配"
+		roundLabel.text = "评估地点：高新南西一刀果实大厦909 1😯2c手机";
+		roundLabel.backgroundColor = .red
+		testView.config(topTitle: "评估地点", bottomTitle: "新南西一刀果实大")
 
 	}
     

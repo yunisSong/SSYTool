@@ -13,13 +13,10 @@ import UIKit
 //extension TestBase1ViewController: BaseTableCtrMustMethod
 
 class TestBase1ViewController: BaseTableViewController {
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 	}
 }
-
 extension TestBase1ViewController :BaseTableCtrMustMethod{
 	
 	func loadNewData(handle:@escaping ([BaseModel]?) -> Void) {
@@ -45,15 +42,19 @@ extension TestBase1ViewController :BaseTableCtrMustMethod{
 
 	
 	func cellClickEvent(_ index: IndexPath, _ model: BaseModel) {
-		
-		
-		
+
 		if index.row == 0 {
 			let layout = UICollectionViewFlowLayout.init()
 			layout.itemSize = .init(width: 150, height: 150)
 			layout.scrollDirection = .vertical
 			let collCtr = TestCollectionViewController.init(cellType: "TestCollectionViewCell", itemWidth: 100)
 			self.navigationController?.pushViewController(collCtr, animated: true)
+		}else if index.row == 1 {
+			
+			let ctr = TestTagsViewController.init()
+			self.navigationController?.pushViewController(ctr, animated: true)
+
+
 		}
 	}
 	

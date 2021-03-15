@@ -9,7 +9,8 @@
 import UIKit
 
 class TestTableViewCell: BaseCell {
-
+	@IBOutlet weak var roundLabel: SSYRoundedCornersLabel!
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

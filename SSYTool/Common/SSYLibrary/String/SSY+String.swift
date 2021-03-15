@@ -20,6 +20,13 @@ extension SSYHelp where Base: NSString {
 		return predicate.evaluate(with: self.base)
 	}
 }
+extension SSYHelp where Base == String {
+	func isPhone() -> Bool {
+		let predicateStr:String! = "^1[34578]\\d{9}$"
+		let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
+		return predicate.evaluate(with: self.base)
+	}
+}
 
 enum Validate {
     case email(_: String)

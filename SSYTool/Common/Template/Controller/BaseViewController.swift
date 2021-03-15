@@ -39,7 +39,7 @@ class BaseViewController: UIViewController {
 	}
 	
 	func settingAppearance() {
-		view.backgroundColor = .white
+		view.backgroundColor = .viewBGColor
 	}
 	
 	func loadSubViews() {

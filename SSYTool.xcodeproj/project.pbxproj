@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7802DAED25FF59C000BA109D /* TestTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802DAEC25FF59C000BA109D /* TestTagsViewController.swift */; };
+		781A8D8825FF0A0300EEFF54 /* SSYRoundedCornersLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A8D8725FF0A0300EEFF54 /* SSYRoundedCornersLabel.swift */; };
+		781A8D8C25FF414600EEFF54 /* BaseTagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A8D8B25FF414600EEFF54 /* BaseTagListViewController.swift */; };
+		781A8D8F25FF419B00EEFF54 /* TagListHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A8D8E25FF419B00EEFF54 /* TagListHeadView.swift */; };
+		781A8D9125FF41DF00EEFF54 /* BaseUIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A8D9025FF41DF00EEFF54 /* BaseUIConfig.swift */; };
+		781A8D9325FF476000EEFF54 /* SSY+UIViewAddClickEnvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A8D9225FF476000EEFF54 /* SSY+UIViewAddClickEnvent.swift */; };
 		7853FC6625E88BB50044D31D /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7853FC6425E88BB50044D31D /* TestTableViewCell.swift */; };
 		7853FC6725E88BB50044D31D /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7853FC6525E88BB50044D31D /* TestTableViewCell.xib */; };
 		7853FC6C25E891940044D31D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7853FC6B25E891940044D31D /* BaseModel.swift */; };
@@ -14,6 +20,16 @@
 		789D0A8225EF740F0032AF7E /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789D0A8125EF740F0032AF7E /* TestCollectionViewController.swift */; };
 		789D0A8525EF74B50032AF7E /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789D0A8325EF74B50032AF7E /* TestCollectionViewCell.swift */; };
 		789D0A8625EF74B50032AF7E /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 789D0A8425EF74B50032AF7E /* TestCollectionViewCell.xib */; };
+		78AFE35E25FF69CC0002FBE2 /* SYConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE35D25FF69CC0002FBE2 /* SYConfig.swift */; };
+		78AFE36825FF7EA70002FBE2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE36025FF7EA70002FBE2 /* UIColorExtension.swift */; };
+		78AFE36925FF7EA70002FBE2 /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE36225FF7EA70002FBE2 /* UIColorInputError.swift */; };
+		78AFE36A25FF7EA70002FBE2 /* macOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78AFE36425FF7EA70002FBE2 /* macOS-Info.plist */; };
+		78AFE36B25FF7EA70002FBE2 /* watchOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78AFE36525FF7EA70002FBE2 /* watchOS-Info.plist */; };
+		78AFE36C25FF7EA70002FBE2 /* iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78AFE36625FF7EA70002FBE2 /* iOS-Info.plist */; };
+		78AFE36D25FF7EA70002FBE2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE36725FF7EA70002FBE2 /* StringExtension.swift */; };
+		78AFE37025FF822E0002FBE2 /* UIButton+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE36F25FF822E0002FBE2 /* UIButton+roundCorners.swift */; };
+		78AFE37225FF82820002FBE2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE37125FF82820002FBE2 /* RoundButton.swift */; };
+		78AFE37625FF89110002FBE2 /* TopBottomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE37525FF89110002FBE2 /* TopBottomTitleView.swift */; };
 		78B78B2125F857D500310A5E /* SSY+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B78B2025F857D500310A5E /* SSY+String.swift */; };
 		78B78B2425F877B000310A5E /* UILabel+config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B78B2325F877B000310A5E /* UILabel+config.swift */; };
 		78F707D825E7914E0085A42E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707D725E7914E0085A42E /* AppDelegate.swift */; };
@@ -39,7 +55,6 @@
 		78F7081A25E792060085A42E /* BaseColletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7080225E792060085A42E /* BaseColletionViewController.swift */; };
 		78F7081B25E792060085A42E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7080325E792060085A42E /* Network.swift */; };
 		78F7081C25E792060085A42E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7080525E792060085A42E /* API.swift */; };
-		78F7081D25E792060085A42E /* SYBaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7080625E792060085A42E /* SYBaseListViewController.swift */; };
 		78F7081E25E792060085A42E /* UIView+LayerHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7080725E792060085A42E /* UIView+LayerHelp.swift */; };
 		78F7081F25E792060085A42E /* SYNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7080825E792060085A42E /* SYNavigationView.swift */; };
 		78F7082F25E792210085A42E /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7082225E792210085A42E /* Tabbar.swift */; };
@@ -63,6 +78,12 @@
 /* Begin PBXFileReference section */
 		0E86692D15E010D77D5CF0B9 /* Pods-SSYTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSYTool.debug.xcconfig"; path = "Target Support Files/Pods-SSYTool/Pods-SSYTool.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1608051C70C7332C3460EA /* Pods_SSYTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSYTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7802DAEC25FF59C000BA109D /* TestTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTagsViewController.swift; sourceTree = "<group>"; };
+		781A8D8725FF0A0300EEFF54 /* SSYRoundedCornersLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSYRoundedCornersLabel.swift; sourceTree = "<group>"; };
+		781A8D8B25FF414600EEFF54 /* BaseTagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTagListViewController.swift; sourceTree = "<group>"; };
+		781A8D8E25FF419B00EEFF54 /* TagListHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListHeadView.swift; sourceTree = "<group>"; };
+		781A8D9025FF41DF00EEFF54 /* BaseUIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIConfig.swift; sourceTree = "<group>"; };
+		781A8D9225FF476000EEFF54 /* SSY+UIViewAddClickEnvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSY+UIViewAddClickEnvent.swift"; sourceTree = "<group>"; };
 		7853FC6425E88BB50044D31D /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		7853FC6525E88BB50044D31D /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		7853FC6B25E891940044D31D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -70,6 +91,17 @@
 		789D0A8125EF740F0032AF7E /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
 		789D0A8325EF74B50032AF7E /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		789D0A8425EF74B50032AF7E /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
+		78AFE35D25FF69CC0002FBE2 /* SYConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYConfig.swift; sourceTree = "<group>"; };
+		78AFE36025FF7EA70002FBE2 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		78AFE36125FF7EA70002FBE2 /* HEXColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEXColor.h; sourceTree = "<group>"; };
+		78AFE36225FF7EA70002FBE2 /* UIColorInputError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorInputError.swift; sourceTree = "<group>"; };
+		78AFE36425FF7EA70002FBE2 /* macOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "macOS-Info.plist"; sourceTree = "<group>"; };
+		78AFE36525FF7EA70002FBE2 /* watchOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "watchOS-Info.plist"; sourceTree = "<group>"; };
+		78AFE36625FF7EA70002FBE2 /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
+		78AFE36725FF7EA70002FBE2 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		78AFE36F25FF822E0002FBE2 /* UIButton+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundCorners.swift"; sourceTree = "<group>"; };
+		78AFE37125FF82820002FBE2 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		78AFE37525FF89110002FBE2 /* TopBottomTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBottomTitleView.swift; sourceTree = "<group>"; };
 		78B78B2025F857D500310A5E /* SSY+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSY+String.swift"; sourceTree = "<group>"; };
 		78B78B2325F877B000310A5E /* UILabel+config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+config.swift"; sourceTree = "<group>"; };
 		78F707D425E7914E0085A42E /* SSYTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSYTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +129,6 @@
 		78F7080225E792060085A42E /* BaseColletionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseColletionViewController.swift; sourceTree = "<group>"; };
 		78F7080325E792060085A42E /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		78F7080525E792060085A42E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		78F7080625E792060085A42E /* SYBaseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYBaseListViewController.swift; sourceTree = "<group>"; };
 		78F7080725E792060085A42E /* UIView+LayerHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LayerHelp.swift"; sourceTree = "<group>"; };
 		78F7080825E792060085A42E /* SYNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYNavigationView.swift; sourceTree = "<group>"; };
 		78F7082225E792210085A42E /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
@@ -140,6 +171,38 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		781A8D8D25FF417300EEFF54 /* TagListViewControl */ = {
+			isa = PBXGroup;
+			children = (
+				781A8D8B25FF414600EEFF54 /* BaseTagListViewController.swift */,
+				781A8D8E25FF419B00EEFF54 /* TagListHeadView.swift */,
+				781A8D9025FF41DF00EEFF54 /* BaseUIConfig.swift */,
+			);
+			path = TagListViewControl;
+			sourceTree = "<group>";
+		};
+		781A8D9425FF4A1E00EEFF54 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				78AFE36E25FF81DE0002FBE2 /* UIButton */,
+				789D0A7B25EF6BB40032AF7E /* CollectionView */,
+				7853FC6A25E8917C0044D31D /* TableView */,
+				78F707F125E792060085A42E /* SSY+UIView.swift */,
+				781A8D9225FF476000EEFF54 /* SSY+UIViewAddClickEnvent.swift */,
+				78F707F225E792060085A42E /* SSY+ScrollViewRegisterCell.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		781A8D9525FF4A4600EEFF54 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				78AFE35F25FF7EA70002FBE2 /* HEXColor */,
+				78F707F325E792060085A42E /* SSY+UIColorToUIImage.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		7853FC6A25E8917C0044D31D /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +215,7 @@
 		789D0A7A25EF6B760032AF7E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				781A8D8D25FF417300EEFF54 /* TagListViewControl */,
 				78F707FF25E792060085A42E /* BaseScrollContainerViewController.swift */,
 				78F7080025E792060085A42E /* BaseViewController.swift */,
 				78F7080125E792060085A42E /* BaseTableViewController.swift */,
@@ -168,9 +232,41 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		78AFE35F25FF7EA70002FBE2 /* HEXColor */ = {
+			isa = PBXGroup;
+			children = (
+				78AFE36025FF7EA70002FBE2 /* UIColorExtension.swift */,
+				78AFE36125FF7EA70002FBE2 /* HEXColor.h */,
+				78AFE36225FF7EA70002FBE2 /* UIColorInputError.swift */,
+				78AFE36325FF7EA70002FBE2 /* Resources */,
+				78AFE36725FF7EA70002FBE2 /* StringExtension.swift */,
+			);
+			name = HEXColor;
+			path = "../../../../../../../../Desktop/Code/购物详情页/UIColor-Hex-Swift-master/HEXColor";
+			sourceTree = "<group>";
+		};
+		78AFE36325FF7EA70002FBE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78AFE36425FF7EA70002FBE2 /* macOS-Info.plist */,
+				78AFE36525FF7EA70002FBE2 /* watchOS-Info.plist */,
+				78AFE36625FF7EA70002FBE2 /* iOS-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		78AFE36E25FF81DE0002FBE2 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				78AFE36F25FF822E0002FBE2 /* UIButton+roundCorners.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		78B78B1F25F857AA00310A5E /* String */ = {
 			isa = PBXGroup;
 			children = (
+				78F707EF25E792060085A42E /* SSY+StringToUINib.swift */,
 				78B78B2025F857D500310A5E /* SSY+String.swift */,
 			);
 			path = String;
@@ -227,7 +323,6 @@
 				78F707FE25E792060085A42E /* Template */,
 				78F7080325E792060085A42E /* Network.swift */,
 				78F7080525E792060085A42E /* API.swift */,
-				78F7080625E792060085A42E /* SYBaseListViewController.swift */,
 				78F7080725E792060085A42E /* UIView+LayerHelp.swift */,
 				78F7080825E792060085A42E /* SYNavigationView.swift */,
 				78F7083B25E793D80085A42E /* SSYTool-Bridging-Header.h */,
@@ -238,14 +333,10 @@
 		78F707ED25E792060085A42E /* SSYLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				781A8D9525FF4A4600EEFF54 /* UIColor */,
+				781A8D9425FF4A1E00EEFF54 /* UIView */,
 				78B78B1F25F857AA00310A5E /* String */,
-				789D0A7B25EF6BB40032AF7E /* CollectionView */,
-				7853FC6A25E8917C0044D31D /* TableView */,
-				78F707EF25E792060085A42E /* SSY+StringToUINib.swift */,
 				78F707F025E792060085A42E /* SSY.swift */,
-				78F707F125E792060085A42E /* SSY+UIView.swift */,
-				78F707F225E792060085A42E /* SSY+ScrollViewRegisterCell.swift */,
-				78F707F325E792060085A42E /* SSY+UIColorToUIImage.swift */,
 			);
 			path = SSYLibrary;
 			sourceTree = "<group>";
@@ -322,6 +413,7 @@
 				789D0A8125EF740F0032AF7E /* TestCollectionViewController.swift */,
 				789D0A8325EF74B50032AF7E /* TestCollectionViewCell.swift */,
 				789D0A8425EF74B50032AF7E /* TestCollectionViewCell.xib */,
+				7802DAEC25FF59C000BA109D /* TestTagsViewController.swift */,
 			);
 			path = TestBase;
 			sourceTree = "<group>";
@@ -331,6 +423,9 @@
 			children = (
 				8BAB34C225EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.swift */,
 				8BAB34C325EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.xib */,
+				781A8D8725FF0A0300EEFF54 /* SSYRoundedCornersLabel.swift */,
+				78AFE37125FF82820002FBE2 /* RoundButton.swift */,
+				78AFE37525FF89110002FBE2 /* TopBottomTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +436,7 @@
 				8BAB34C825EFC291005C65E7 /* UIFont+config.swift */,
 				8BAB34CC25EFD971005C65E7 /* UIColor+config.swift */,
 				78B78B2325F877B000310A5E /* UILabel+config.swift */,
+				78AFE35D25FF69CC0002FBE2 /* SYConfig.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -416,13 +512,16 @@
 			files = (
 				8BAB34C525EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.xib in Resources */,
 				78F707E425E791500085A42E /* LaunchScreen.storyboard in Resources */,
+				78AFE36B25FF7EA70002FBE2 /* watchOS-Info.plist in Resources */,
 				7853FC6725E88BB50044D31D /* TestTableViewCell.xib in Resources */,
 				789D0A8625EF74B50032AF7E /* TestCollectionViewCell.xib in Resources */,
 				78F707E125E791500085A42E /* Assets.xcassets in Resources */,
 				78F7081225E792060085A42E /* AddCollectionViewCell.xib in Resources */,
+				78AFE36C25FF7EA70002FBE2 /* iOS-Info.plist in Resources */,
 				78F7081425E792060085A42E /* SelectImageCollectionViewCell.xib in Resources */,
 				78F7083825E792210085A42E /* SYTableViewCell.xib in Resources */,
 				78F707DF25E7914E0085A42E /* Main.storyboard in Resources */,
+				78AFE36A25FF7EA70002FBE2 /* macOS-Info.plist in Resources */,
 				78F7083625E792210085A42E /* TodoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,9 +578,11 @@
 				78F7080E25E792060085A42E /* SSY+UIColorToUIImage.swift in Sources */,
 				8BAB34C425EFC22B005C65E7 /* SSYDefaultTitleTableViewCell.swift in Sources */,
 				78F7081F25E792060085A42E /* SYNavigationView.swift in Sources */,
+				781A8D9325FF476000EEFF54 /* SSY+UIViewAddClickEnvent.swift in Sources */,
 				78F7083725E792210085A42E /* HomeViewController.swift in Sources */,
 				78F7083425E792210085A42E /* TestBase1ViewController.swift in Sources */,
 				78F7083525E792210085A42E /* TodoTableViewCell.swift in Sources */,
+				78AFE35E25FF69CC0002FBE2 /* SYConfig.swift in Sources */,
 				78B78B2425F877B000310A5E /* UILabel+config.swift in Sources */,
 				78F7083325E792210085A42E /* SYTableViewCell.swift in Sources */,
 				78F7082F25E792210085A42E /* Tabbar.swift in Sources */,
@@ -489,6 +590,7 @@
 				78F7081925E792060085A42E /* BaseTableViewController.swift in Sources */,
 				78F7081A25E792060085A42E /* BaseColletionViewController.swift in Sources */,
 				78F7081625E792060085A42E /* SelectImageCollectionViewCell.swift in Sources */,
+				78AFE36D25FF7EA70002FBE2 /* StringExtension.swift in Sources */,
 				78F7081525E792060085A42E /* ImageSelectorView.swift in Sources */,
 				78F7083025E792210085A42E /* SYNavigationController.swift in Sources */,
 				789D0A8225EF740F0032AF7E /* TestCollectionViewController.swift in Sources */,
@@ -497,23 +599,32 @@
 				78F7081325E792060085A42E /* AddCollectionViewCell.swift in Sources */,
 				78F7080A25E792060085A42E /* SSY+StringToUINib.swift in Sources */,
 				789D0A7D25EF6BE00032AF7E /* SSY+CollectionView.swift in Sources */,
-				78F7081D25E792060085A42E /* SYBaseListViewController.swift in Sources */,
 				78F7083125E792210085A42E /* TabbarViewController.swift in Sources */,
 				78F7081B25E792060085A42E /* Network.swift in Sources */,
+				78AFE36925FF7EA70002FBE2 /* UIColorInputError.swift in Sources */,
+				78AFE37025FF822E0002FBE2 /* UIButton+roundCorners.swift in Sources */,
 				7853FC6625E88BB50044D31D /* TestTableViewCell.swift in Sources */,
 				78F7083925E792210085A42E /* SYTodoViewController.swift in Sources */,
 				78B78B2125F857D500310A5E /* SSY+String.swift in Sources */,
 				78F7083225E792210085A42E /* MeViewController.swift in Sources */,
+				78AFE37625FF89110002FBE2 /* TopBottomTitleView.swift in Sources */,
 				78F7081025E792060085A42E /* BaseCellLayoutModel.swift in Sources */,
 				8BAB34C925EFC291005C65E7 /* UIFont+config.swift in Sources */,
 				78F7081C25E792060085A42E /* API.swift in Sources */,
 				78F7080925E792060085A42E /* SSY+TableView.swift in Sources */,
 				7853FC6C25E891940044D31D /* BaseModel.swift in Sources */,
+				781A8D8825FF0A0300EEFF54 /* SSYRoundedCornersLabel.swift in Sources */,
 				8BAB34CD25EFD971005C65E7 /* UIColor+config.swift in Sources */,
 				789D0A8525EF74B50032AF7E /* TestCollectionViewCell.swift in Sources */,
+				78AFE36825FF7EA70002FBE2 /* UIColorExtension.swift in Sources */,
+				781A8D8C25FF414600EEFF54 /* BaseTagListViewController.swift in Sources */,
+				781A8D9125FF41DF00EEFF54 /* BaseUIConfig.swift in Sources */,
 				78F7081725E792060085A42E /* BaseScrollContainerViewController.swift in Sources */,
 				78F7081825E792060085A42E /* BaseViewController.swift in Sources */,
+				7802DAED25FF59C000BA109D /* TestTagsViewController.swift in Sources */,
 				78F7080C25E792060085A42E /* SSY+UIView.swift in Sources */,
+				781A8D8F25FF419B00EEFF54 /* TagListHeadView.swift in Sources */,
+				78AFE37225FF82820002FBE2 /* RoundButton.swift in Sources */,
 				78F707D825E7914E0085A42E /* AppDelegate.swift in Sources */,
 				78F7081E25E792060085A42E /* UIView+LayerHelp.swift in Sources */,
 			);

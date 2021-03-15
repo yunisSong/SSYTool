@@ -27,7 +27,11 @@ typealias BaseTableViewCtr = BaseTableViewController & BaseTableCtrMustMethod
 class BaseTableViewController: BaseViewController {
 	// MARK: - parameter property
 	var tableView = UITableView.init(frame: .zero, style: .plain)
-	var cellType:String
+	var cellType:String = "" {
+		didSet {
+			tableView.ssy.ssy_register(nib: cellType)
+		}
+	}
 	var pageIndex = 1;
 	var pageSize = 20;
 	var clickHnadle: SYCellClickHandle?
@@ -42,6 +46,9 @@ class BaseTableViewController: BaseViewController {
 
 	init(cellType:String) {
 		self.cellType = cellType
+		super.init(nibName: nil, bundle: nil)
+	}
+	init() {
 		super.init(nibName: nil, bundle: nil)
 	}
 	override func viewDidLoad() {

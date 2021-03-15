@@ -30,17 +30,27 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-Vk-jPL" customClass="SSYRoundedCornersLabel" customModule="SSYTool" customModuleProvider="target">
+                        <rect key="frame" x="74" y="12" width="234" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="IYb-8H-AaV" secondAttribute="trailing" constant="12" id="23x-56-4a1"/>
                     <constraint firstAttribute="bottom" secondItem="fFV-jI-r0c" secondAttribute="bottom" constant="12" id="2xV-Uu-NgM"/>
+                    <constraint firstAttribute="trailing" secondItem="ccQ-Vk-jPL" secondAttribute="trailing" constant="12" id="4ui-rQ-wOZ"/>
                     <constraint firstItem="IYb-8H-AaV" firstAttribute="centerY" secondItem="fFV-jI-r0c" secondAttribute="centerY" id="NW6-SW-eJq"/>
                     <constraint firstItem="IYb-8H-AaV" firstAttribute="leading" secondItem="fFV-jI-r0c" secondAttribute="trailing" constant="12" id="QSA-cU-wky"/>
                     <constraint firstItem="fFV-jI-r0c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="bEp-Im-Dfb"/>
+                    <constraint firstItem="ccQ-Vk-jPL" firstAttribute="centerY" secondItem="fFV-jI-r0c" secondAttribute="centerY" id="hW0-1N-Km4"/>
+                    <constraint firstItem="ccQ-Vk-jPL" firstAttribute="leading" secondItem="fFV-jI-r0c" secondAttribute="trailing" constant="12" id="kec-pH-Q9j"/>
                     <constraint firstItem="fFV-jI-r0c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="rlj-4o-jKa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="roundLabel" destination="ccQ-Vk-jPL" id="dUE-7f-dRx"/>
+            </connections>
             <point key="canvasLocation" x="124.6376811594203" y="157.70089285714286"/>
         </tableViewCell>
     </objects>

@@ -12,7 +12,7 @@ import Foundation
 //indexPath
 typealias SYClickHandle = ()->Void
 typealias SYEventHandle = ()->Void
-
+typealias SYClickEventHandle = (Int,String)->Void
 
 
 //延迟函数

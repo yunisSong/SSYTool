@@ -8,8 +8,20 @@
 
 import Foundation
 extension UILabel {
-	func configTitle()  {
-		self.font = .cellTitleFont()
-		self.textColor = .cellTitleColor()
+	class func cellTitleLabel() -> UILabel {
+		let label = UILabel.init()
+		label.configCellTitle()
+		return label
+	}
+	func configCellTitle()  {
+		self.setStyle(font: .cellTitleFont, textColor: .cellTitleColor)
+	}
+	func configCellContent()  {
+		self.setStyle(font: .cellContentFont, textColor: .cellContentColor)
+	}
+	func setStyle(font:UIFont,textColor:UIColor,bgColor:UIColor = .clear)  {
+		self.font = font
+		self.textColor = textColor
+		self.backgroundColor = bgColor;
 	}
 }

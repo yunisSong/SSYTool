@@ -93,6 +93,18 @@
                                     <constraint firstAttribute="height" constant="30" id="fC2-6W-8gk"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N10-3K-K6N" customClass="SSYRoundedCornersLabel" customModule="SSYTool" customModuleProvider="target">
+                                <rect key="frame" x="15" y="150" width="260" height="21"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fII-ji-Xbf" customClass="TopBottomTitleView" customModule="SSYTool" customModuleProvider="target">
+                                <rect key="frame" x="140" y="88" width="10" height="10"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="1BY-8o-pEu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="Qbi-GV-i7p"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -102,17 +114,23 @@
                             <constraint firstAttribute="trailing" secondItem="iBa-ds-x6y" secondAttribute="trailing" constant="15" id="8HT-js-qyy"/>
                             <constraint firstItem="xw9-dD-W8m" firstAttribute="centerY" secondItem="fMG-fP-Iht" secondAttribute="centerY" id="8bj-gS-ykr"/>
                             <constraint firstItem="xw9-dD-W8m" firstAttribute="leading" secondItem="fMG-fP-Iht" secondAttribute="trailing" constant="8" id="Bc2-G6-55B"/>
+                            <constraint firstItem="fII-ji-Xbf" firstAttribute="centerY" secondItem="hkF-AE-cOw" secondAttribute="centerY" id="IPy-tZ-0fN"/>
                             <constraint firstAttribute="trailing" secondItem="EIZ-NV-MST" secondAttribute="trailing" constant="15" id="Mag-NT-bQM"/>
                             <constraint firstAttribute="trailing" secondItem="ZKh-pk-Bku" secondAttribute="trailing" constant="15" id="O4k-a3-Ihz"/>
                             <constraint firstItem="ZKh-pk-Bku" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xw9-dD-W8m" secondAttribute="trailing" constant="15" id="Osn-jb-III"/>
+                            <constraint firstItem="fII-ji-Xbf" firstAttribute="centerX" secondItem="hkF-AE-cOw" secondAttribute="centerX" id="RDL-FL-Zq0"/>
                             <constraint firstItem="fMG-fP-Iht" firstAttribute="top" secondItem="fwg-nz-mqH" secondAttribute="bottom" constant="15" id="UbA-Cl-bXn"/>
+                            <constraint firstItem="N10-3K-K6N" firstAttribute="top" secondItem="iBa-ds-x6y" secondAttribute="top" id="XAp-ie-OQY"/>
+                            <constraint firstItem="N10-3K-K6N" firstAttribute="bottom" secondItem="iBa-ds-x6y" secondAttribute="bottom" id="Xh2-tf-92x"/>
                             <constraint firstItem="EIZ-NV-MST" firstAttribute="top" secondItem="fMG-fP-Iht" secondAttribute="bottom" constant="8" id="Xod-dw-6rC"/>
                             <constraint firstItem="EIZ-NV-MST" firstAttribute="leading" secondItem="fMG-fP-Iht" secondAttribute="leading" id="bnw-fq-5sZ"/>
+                            <constraint firstItem="N10-3K-K6N" firstAttribute="leading" secondItem="iBa-ds-x6y" secondAttribute="leading" id="d3j-C2-Zae"/>
                             <constraint firstItem="fMG-fP-Iht" firstAttribute="leading" secondItem="hkF-AE-cOw" secondAttribute="leading" constant="15" id="dXT-Ti-r0o"/>
                             <constraint firstAttribute="trailing" secondItem="fwg-nz-mqH" secondAttribute="trailing" id="hTD-vD-Q1m"/>
                             <constraint firstItem="fwg-nz-mqH" firstAttribute="leading" secondItem="hkF-AE-cOw" secondAttribute="leading" id="hXg-8j-yQx"/>
                             <constraint firstAttribute="bottom" secondItem="iBa-ds-x6y" secondAttribute="bottom" constant="15" id="oa9-ba-qhg"/>
                             <constraint firstItem="ZKh-pk-Bku" firstAttribute="top" secondItem="fwg-nz-mqH" secondAttribute="bottom" constant="15" id="s78-1y-Mz1"/>
+                            <constraint firstItem="N10-3K-K6N" firstAttribute="trailing" secondItem="iBa-ds-x6y" secondAttribute="trailing" id="uFX-ur-hsx"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -131,12 +149,14 @@
                 <outlet property="operationName" destination="FuC-kr-g4H" id="Uye-2L-FOc"/>
                 <outlet property="operationTime" destination="iBa-ds-x6y" id="YuX-RJ-1fr"/>
                 <outlet property="predicateLabel" destination="DMj-ec-I8n" id="RdV-1r-7QN"/>
+                <outlet property="roundLabel" destination="N10-3K-K6N" id="pse-jd-wMX"/>
                 <outlet property="stateLabel" destination="ZKh-pk-Bku" id="qIn-3x-zLC"/>
+                <outlet property="testView" destination="fII-ji-Xbf" id="hgv-2F-InK"/>
                 <outlet property="timeLabel" destination="Sly-2c-C0x" id="7eI-GZ-gaU"/>
                 <outlet property="titleView" destination="fwg-nz-mqH" id="reb-kT-B16"/>
                 <outlet property="userLabel" destination="fMG-fP-Iht" id="vsP-Mi-c0K"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="127.90178571428571"/>
+            <point key="canvasLocation" x="-293" y="-62"/>
         </tableViewCell>
     </objects>
 </document>
