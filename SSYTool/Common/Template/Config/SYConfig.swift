@@ -14,6 +14,7 @@ var SYDefaultAnimationDuration = 0.35
 // MARK: - 页面边距
 var SYDefaultViewOffset = 15
 var SYDefaultViewRadius = 5
+var SYDefaultTextViewOffset = 8
 
 // MARK: - 常用参数
 

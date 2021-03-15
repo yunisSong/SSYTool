@@ -62,6 +62,17 @@ class HomeViewController: UIViewController {
 			make.top.equalToSuperview().offset(250)
 
 		}
+        
+        var textView = ShowInputNuberTextView.init(placeholder: "输入滚滚滚", maxInputNumer: 260)
+        
+        self.view.addSubview(textView)
+        
+        textView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(350)
+            make.height.equalTo(200)
+            make.width.equalTo(200)
+        }
 
     }
     

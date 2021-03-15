@@ -105,7 +105,7 @@ class TagListHeadView: UIView {
 			make.height.equalTo(1)
 			make.width.equalToSuperview().multipliedBy(1.0/Double(count ?? 1))
 		}
-		
+
 	}
 	
 	// MARK: - Network Methods && Target Methods

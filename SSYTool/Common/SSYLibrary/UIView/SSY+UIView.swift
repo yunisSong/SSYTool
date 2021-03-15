@@ -65,4 +65,35 @@ extension SSYHelp where Base: UIView {
 		}
 		return nil
 	}
+    /*
+     for (UIView *view = self; view; view = view.superview) {
+         UIResponder *nextResponder = [view nextResponder];
+         if ([nextResponder isKindOfClass:[UIViewController class]]) {
+             return (UIViewController *)nextResponder;
+         }
+     }
+     return nil;
+     */
+    func parentController() -> UIViewController? {
+        
+//        for (var view = self.base;view;view = view.supview()) {
+//            
+//        }
+       
+        for view in sequence(first: self.base.superview! , next: {$0.superview}) {
+//            let nextResponder = view.next
+//            if ((nextResponder?.isKind(of: UIViewController.self)) != nil) {
+//                return nextResponder as? UIViewController
+//            }
+            if let responder = view.next{
+
+                if responder.isKind(of: UIViewController.self){
+
+                    return responder as? UIViewController
+                }
+            }
+            
+        }
+        return nil
+    }
 }
