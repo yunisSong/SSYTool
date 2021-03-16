@@ -22,7 +22,7 @@ class SSYDefaultTitleTableViewCell: BaseCell {
         // Configure the view for the selected state
     }
     
-    override func configModel(model:BaseModel)
+    override func configModel(model:Any)
     {
         
     }

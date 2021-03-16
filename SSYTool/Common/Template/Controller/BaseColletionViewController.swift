@@ -13,7 +13,7 @@ import UIKit
 */
 
 protocol BaseCollectionCtrMustMethod:BaseScrollMustMethod {
-	func configCell(_ index:IndexPath,_ model:BaseModel,_ cell:BaseCollectionCell)
+	func configCell(_ index:IndexPath,_ model:Any,_ cell:UICollectionViewCell)
 }
 typealias BaseCollectionViewCtr = BaseCollectionViewController & BaseCollectionCtrMustMethod
 

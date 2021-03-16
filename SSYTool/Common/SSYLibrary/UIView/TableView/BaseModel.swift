@@ -13,18 +13,18 @@ class BaseModel: NSObject {
 }
 
 protocol BaseCellConfigProtocol {
-	func configModel(model:BaseModel)
+	func configModel(model:Any)
 }
 
 // MARK: - 布局cell 基类
 class BaseCell: UITableViewCell {
-	func configModel(model:BaseModel)
+	func configModel(model:Any)
 	{
 		
 	}
 }
 class BaseCollectionCell: UICollectionViewCell {
-	func configModel(model:BaseModel)
+	func configModel(model:Any)
 	{
 		
 	}

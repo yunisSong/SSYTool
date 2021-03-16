@@ -28,7 +28,7 @@ class MeViewController: UIViewController {
 			help.configHandle = {
 				[weak self] index,model,cell in
 				self?.cellConfig(index, model, cell,tabview)
-			}
+				}
 		}
 		view.addSubview(tabview)
 		tabview.snp.makeConstraints { (make) in
@@ -37,12 +37,12 @@ class MeViewController: UIViewController {
 		}
 		tabview.reloadData()
     }
-	func cellClickEvent(_ index:IndexPath,_ model:BaseModel)  {
+	func cellClickEvent(_ index:IndexPath,_ model:Any)  {
 		if index.row == 0 {
 			self.navigationController?.pushViewController(TestBase1ViewController(cellType: "TodoTableViewCell"), animated: true)
 		}
 	}
-	func cellConfig(_ index:IndexPath,_ model:BaseModel,_ cell:BaseCell,_ tableView:UITableView)  {
+	func cellConfig(_ index:IndexPath,_ model:Any,_ cell:UITableViewCell,_ tableView:UITableView)  {
 		if let model = model as? BaseCellLayoutModel ,model.cellID.count > 0{
 			if (model.cellID == "TodoTableViewCell") {
 				let cell = cell as! TodoTableViewCell

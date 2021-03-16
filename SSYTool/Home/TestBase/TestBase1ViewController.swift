@@ -19,7 +19,8 @@ class TestBase1ViewController: BaseTableViewController {
 }
 extension TestBase1ViewController :BaseTableCtrMustMethod{
 	
-	func loadNewData(handle:@escaping ([BaseModel]?) -> Void) {
+
+	func loadNewData(handle:@escaping ([Any]?) -> Void) {
 		let model = BaseModel()
 		
 		DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
@@ -30,7 +31,7 @@ extension TestBase1ViewController :BaseTableCtrMustMethod{
 		}
 	}
 	
-	func loadMoreData(handle: @escaping ([BaseModel]?) -> Void) {
+	func loadMoreData(handle: @escaping ([Any]?) -> Void) {
 		let model = BaseModel()
 		DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
 			DispatchQueue.main.async {
@@ -41,7 +42,7 @@ extension TestBase1ViewController :BaseTableCtrMustMethod{
 	}
 
 	
-	func cellClickEvent(_ index: IndexPath, _ model: BaseModel) {
+	func cellClickEvent(_ index: IndexPath, _ model: Any) {
 
 		if index.row == 0 {
 			let layout = UICollectionViewFlowLayout.init()
@@ -58,7 +59,7 @@ extension TestBase1ViewController :BaseTableCtrMustMethod{
 		}
 	}
 	
-	func configCell(_ index: IndexPath, _ model: BaseModel, _ cell: BaseCell) {
+	func configCell(_ index: IndexPath, _ model: Any, _ cell: UITableViewCell) {
 		
 	}
 }

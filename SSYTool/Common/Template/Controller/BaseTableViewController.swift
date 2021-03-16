@@ -13,14 +13,14 @@ import UIKit
 基于 BaseTableViewController 的子类要遵循 BaseTableViewCtr
 */
 
-typealias requestDataHandle = ([BaseModel]?)->Void
+typealias requestDataHandle = ([Any]?)->Void
 protocol BaseScrollMustMethod {
 	func loadNewData(handle:@escaping requestDataHandle) -> Void
 	func loadMoreData(handle:@escaping requestDataHandle) ->Void
-	func cellClickEvent(_ index:IndexPath,_ model:BaseModel)
+	func cellClickEvent(_ index:IndexPath,_ model:Any)
 }
 protocol BaseTableCtrMustMethod:BaseScrollMustMethod {
-	func configCell(_ index:IndexPath,_ model:BaseModel,_ cell:BaseCell)
+	func configCell(_ index:IndexPath,_ model:Any,_ cell:UITableViewCell)
 }
 typealias BaseTableViewCtr = BaseTableViewController & BaseTableCtrMustMethod
 
@@ -75,7 +75,7 @@ class BaseTableViewController: BaseViewController {
 			help.configHandle = {
 				[weak ctr] index,model,cell in
 				ctr?.configCell(index, model, cell)
-			}
+				}
 		}
 		view.addSubview(tableView)
 		tableView.snp.makeConstraints { (make) in

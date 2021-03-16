@@ -7,8 +7,8 @@
 //
 
 import Foundation
-typealias SYCollectionCellClickHandle = (IndexPath,BaseModel)->Void
-typealias SYCollectionCellConfigHandle = (IndexPath,BaseModel,BaseCollectionCell)->Void
+typealias SYCollectionCellClickHandle = (IndexPath,Any)->Void
+typealias SYCollectionCellConfigHandle = (IndexPath,Any,UICollectionViewCell)->Void
 
 extension UICollectionView {
 	private static var syHelp:Void?
@@ -82,19 +82,19 @@ extension SSYHelp where Base: UICollectionView
 
 
 class SYCollectionViewHelp: NSObject {
-	var dataSource : [BaseModel]?
+	var dataSource : [Any]?
 	var cellID = ""
 	var clickHnadle: SYCollectionCellClickHandle?
 	var configHandle: SYCollectionCellConfigHandle?
 	
 	weak var collView:UICollectionView?
 	
-	func refreshing(models:[BaseModel]?)  {
+	func refreshing(models:[Any]?)  {
 		self.dataSource = models
 		collView?.ssy.endRefreshing()
 		collView?.reloadData()
 	}
-	func loadMore(models:[BaseModel]?)  {
+	func loadMore(models:[Any]?)  {
 		self.dataSource?.append(contentsOf: models ?? [])
 		collView?.ssy.endLoadMore()
 		collView?.reloadData()

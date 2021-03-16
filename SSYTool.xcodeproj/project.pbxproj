@@ -24,6 +24,7 @@
 		78AFE37025FF822E0002FBE2 /* UIButton+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE36F25FF822E0002FBE2 /* UIButton+roundCorners.swift */; };
 		78AFE37225FF82820002FBE2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE37125FF82820002FBE2 /* RoundButton.swift */; };
 		78AFE37625FF89110002FBE2 /* TopBottomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE37525FF89110002FBE2 /* TopBottomTitleView.swift */; };
+		78AFE37826003DFE0002FBE2 /* DropMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFE37726003DFE0002FBE2 /* DropMenuView.swift */; };
 		78B78B2125F857D500310A5E /* SSY+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B78B2025F857D500310A5E /* SSY+String.swift */; };
 		78B78B2425F877B000310A5E /* UILabel+config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B78B2325F877B000310A5E /* UILabel+config.swift */; };
 		78F707D825E7914E0085A42E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F707D725E7914E0085A42E /* AppDelegate.swift */; };
@@ -91,6 +92,7 @@
 		78AFE36F25FF822E0002FBE2 /* UIButton+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundCorners.swift"; sourceTree = "<group>"; };
 		78AFE37125FF82820002FBE2 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		78AFE37525FF89110002FBE2 /* TopBottomTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBottomTitleView.swift; sourceTree = "<group>"; };
+		78AFE37726003DFE0002FBE2 /* DropMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropMenuView.swift; sourceTree = "<group>"; };
 		78B78B2025F857D500310A5E /* SSY+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSY+String.swift"; sourceTree = "<group>"; };
 		78B78B2325F877B000310A5E /* UILabel+config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+config.swift"; sourceTree = "<group>"; };
 		78F707D425E7914E0085A42E /* SSYTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSYTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,6 +397,7 @@
 				78AFE37125FF82820002FBE2 /* RoundButton.swift */,
 				78AFE37525FF89110002FBE2 /* TopBottomTitleView.swift */,
 				8BAB350225FFAF87005C65E7 /* ShowInputNuberTextView.swift */,
+				78AFE37726003DFE0002FBE2 /* DropMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				781A8D9325FF476000EEFF54 /* SSY+UIViewAddClickEnvent.swift in Sources */,
 				78F7083725E792210085A42E /* HomeViewController.swift in Sources */,
 				78F7083425E792210085A42E /* TestBase1ViewController.swift in Sources */,
+				78AFE37826003DFE0002FBE2 /* DropMenuView.swift in Sources */,
 				78F7083525E792210085A42E /* TodoTableViewCell.swift in Sources */,
 				78AFE35E25FF69CC0002FBE2 /* SYConfig.swift in Sources */,
 				78B78B2425F877B000310A5E /* UILabel+config.swift in Sources */,

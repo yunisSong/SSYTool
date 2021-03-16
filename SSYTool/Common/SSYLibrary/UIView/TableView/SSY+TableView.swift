@@ -11,9 +11,9 @@ import Foundation
 ///为 tableview 添加一个帮助类 用来处理代理和数据源
 
 //TODO: 添加空数据时候的占位视图
-
-typealias SYCellClickHandle = (IndexPath,BaseModel)->Void
-typealias SYCellConfigHandle = (IndexPath,BaseModel,BaseCell)->Void
+typealias SYCellClickIndexHandle = (IndexPath)->Void
+typealias SYCellClickHandle = (IndexPath,Any)->Void
+typealias SYCellConfigHandle = (IndexPath,Any,UITableViewCell)->Void
 
 extension UITableView {
 	private static var syHelp:Void?
@@ -87,19 +87,20 @@ extension SSYHelp where Base: UITableView
 
 
 class SYTableViewHelp: NSObject {
-	var dataSource : [BaseModel]?
+	var dataSource : [Any]?
 	var cellID = ""
 	var clickHnadle: SYCellClickHandle?
+	var clickIndexHnadle: SYCellClickIndexHandle?
 	var configHandle: SYCellConfigHandle?
 	
 	weak var tab:UITableView?
 	
-	func refreshing(models:[BaseModel]?)  {
+	func refreshing(models:[Any]?)  {
 		self.dataSource = models
 		self.tab?.ssy.endRefreshing()
 		tab?.reloadData()
 	}
-	func loadMore(models:[BaseModel]?)  {
+	func loadMore(models:[Any]?)  {
 		self.dataSource?.append(contentsOf: models ?? [])
 		self.tab?.ssy.endLoadMore()
 		tab?.reloadData()
@@ -116,6 +117,7 @@ extension SYTableViewHelp:UITableViewDelegate
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let model = dataSource?[indexPath.row]
 		clickHnadle?(indexPath,model!)
+		clickIndexHnadle?(indexPath)
 	}
 }
 // MARK: - 帮助类扩展 UITableViewDataSource
@@ -132,9 +134,10 @@ extension SYTableViewHelp:UITableViewDataSource {
 		}else{
 			cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
 		}
-		let bcell = cell as! BaseCell
-		bcell.configModel(model: model!)
-		configHandle?(indexPath,model!,bcell)
+		if let bcell = cell as? BaseCell {
+			bcell.configModel(model: model!)
+		}
+		configHandle?(indexPath,model!,cell)
 		return cell
 	}
 }

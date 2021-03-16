@@ -10,6 +10,8 @@ import UIKit
 
 class TestCollectionViewController: BaseCollectionViewCtr {
 
+	
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,7 @@ class TestCollectionViewController: BaseCollectionViewCtr {
 }
 
 extension TestCollectionViewController {
-	func configCell(_ index: IndexPath, _ model: BaseModel, _ cell: BaseCollectionCell) {
+	func configCell(_ index: IndexPath, _ model: Any, _ cell: UICollectionViewCell) {
 		if let cell = cell as? TestCollectionViewCell {
 			cell.contentLabel.text = String.init(index.row)
 		}
@@ -46,7 +48,7 @@ extension TestCollectionViewController {
 		}
 	}
 	
-	func cellClickEvent(_ index: IndexPath, _ model: BaseModel) {
+	func cellClickEvent(_ index: IndexPath, _ model: Any) {
 		clickHnadle?(index,model)
 	}
 	

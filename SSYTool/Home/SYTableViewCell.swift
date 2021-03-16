@@ -39,7 +39,7 @@ class SYTableViewCell: BaseCell {
 
         // Configure the view for the selected state
     }
-	override func configModel(model: BaseModel) {
+	override func configModel(model: Any) {
 		creatUserLabel.text = "陈安安"
 		predicateLabel.text = "发起"
 		operationName.text = "评估申请"
